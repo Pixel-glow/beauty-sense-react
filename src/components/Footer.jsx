@@ -23,9 +23,9 @@ export default function Footer() {
         
         <div className="mt-10 pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-6 text-white/80 text-sm">
           <span>© 2025 Beauty Sense</span>
-          <a href="/" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="/" className="hover:text-white transition-colors">Terms of Service</a>
-          <a href="/" className="hover:text-white transition-colors">Contact</a>
+          <span className="hover:text-white transition-colors cursor-pointer">Privacy Policy</span>
+		<span className="hover:text-white transition-colors cursor-pointer">Terms of Service</span>
+		<span className="hover:text-white transition-colors cursor-pointer">Contact</span>
         </div>
       </div>
     </footer>
