@@ -6,9 +6,8 @@ import os
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins for development
-
-   # Get API key from environment variable
-   ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+# Get API key from environment variable
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 
 @app.route('/analyze', methods=['POST'])
 def analyze_reviews():
@@ -254,4 +253,5 @@ if __name__ == '__main__':
     
 
     app.run(debug=True, port=5000, host='0.0.0.0', use_reloader=False)
+
 
