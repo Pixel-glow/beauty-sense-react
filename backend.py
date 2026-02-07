@@ -2,14 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import anthropic
 import json
+import os
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins for development
-
-# YOUR CLAUDE API KEY - REPLACE THIS!
-import os
-   app = Flask(__name__)
-   CORS(app, resources={r"/*": {"origins": "*"}})
 
    # Get API key from environment variable
    ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
@@ -258,3 +254,4 @@ if __name__ == '__main__':
     
 
     app.run(debug=True, port=5000, host='0.0.0.0', use_reloader=False)
+
